@@ -19,6 +19,7 @@ router.post('/', async (req, res) => {
     console.log(req.body)
     const post = new Post({
         title: req.body.title,
+        image: req.body.image,
         description: req.body.description
     });
 
@@ -56,7 +57,7 @@ router.get('/:postId', async (req, res) => {
 
 router.patch('/:postId', async (req, res) => {
     try {
-        const updatedPost = await Post.updateOne({ _id: req.params.postId}, {$set: {title: req.body.title}})
+        const updatedPost = await Post.updateOne({ _id: req.params.postId}, {$set: {title: req.body.title, image: req.body.image, description: req.body.description}})
         res.json(updatedPost)
     }
     catch (err) {

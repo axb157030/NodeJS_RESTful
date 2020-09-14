@@ -2,18 +2,20 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 const bodyParser = require("body-parser")
+const cors = require("cors")
 require('dotenv/config')
 
 app.use(bodyParser.json())
 
 //Import Routes
 const postRoutes = require('./routes/posts');
+app.use(cors())
 
 app.use('/posts', postRoutes) // url postRoutes start at is http://localhost:3000/posts/
 
 // ROUTES
 app.get('/', (req, res) => {
-    res.send("We are home")
+    res.json({msg:"We are home"})
 });
 
 
@@ -27,4 +29,4 @@ mongoose.connect(process.env.DB_CONNECTION,  { useUnifiedTopology: true, useNewU
 // https://www.quackit.com/mongodb/tutorial/how_to_access_mongodb.cfm
 
 // How do we start listening to the server
-app.listen(300)
+app.listen(4000)
