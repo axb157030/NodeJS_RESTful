@@ -8,10 +8,10 @@ require('dotenv/config')
 app.use(bodyParser.json())
 
 //Import Routes
-const postRoutes = require('./routes/posts');
+const bookRoutes = require('./routes/books');
 app.use(cors())
 
-app.use('/posts', postRoutes) // url postRoutes start at is http://localhost:3000/posts/
+app.use('/books', bookRoutes) // url postRoutes start at is http://localhost:4000/books/
 
 // ROUTES
 app.get('/', (req, res) => {

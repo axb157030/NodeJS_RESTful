@@ -1,14 +1,14 @@
 const express = require('express')
 const router = express.Router();
-const Post = require('../models/Post')
+const Book = require('../models/Book')
 
 // ROUTES
 
 router.get('/', async (req, res) => {
     //res.send("We are on posts")
     try {
-        const posts = await Post.find()
-        res.json(posts)
+        const books = await Book.find()
+        res.json(books)
     }
     catch (err) {
         res.json({ message: err })
@@ -17,15 +17,15 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
     console.log(req.body)
-    const post = new Post({
+    const book = new Book({
         title: req.body.title,
         image: req.body.image,
         description: req.body.description
     });
 
     try {
-        const savedPost = await post.save()
-        res.json(savedPost)
+        const savedBook = await book.save()
+        res.json(savedBook)
     }
     catch (err) {
         res.json({ message: err })
@@ -33,20 +33,20 @@ router.post('/', async (req, res) => {
 
 });
 
-router.get('/:postId', async (req, res) => {
+router.get('/:bookId', async (req, res) => {
     try {
-        const post = await Post.findById(req.params.postId)
-        res.json(post)
+        const book = await Book.findById(req.params.bookId)
+        res.json(book)
     }
     catch (err) {
         res.json({ message: err })
     }
 });
 
-    router.delete('/:postId', async (req, res) => {
+    router.delete('/:bookId', async (req, res) => {
         try {
-            const removedPost = await Post.remove({ _id: req.params.postId})
-            res.json(removedPost)
+            const removedBook = await Book.remove({ _id: req.params.BookId})
+            res.json(removedBook)
         }
         catch (err) {
             res.json({ message: err })
@@ -55,10 +55,10 @@ router.get('/:postId', async (req, res) => {
 });
 
 
-router.patch('/:postId', async (req, res) => {
+router.patch('/:bookId', async (req, res) => {
     try {
-        const updatedPost = await Post.updateOne({ _id: req.params.postId}, {$set: {title: req.body.title, image: req.body.image, description: req.body.description}})
-        res.json(updatedPost)
+        const updatedBook = await Book.updateOne({ _id: req.params.postId}, {$set: {title: req.body.title, image: req.body.image, description: req.body.description}})
+        res.json(updatedBook)
     }
     catch (err) {
         res.json({ message: err })

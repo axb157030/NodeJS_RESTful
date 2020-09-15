@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const PostSchema = mongoose.Schema({
+const BookSchema = mongoose.Schema({
     title: {
         type: String,
         required: true
@@ -12,7 +12,7 @@ const PostSchema = mongoose.Schema({
     description:
     {
         type: String,
-        date: Date.now
+        required: false
     },
     date: {
         type: Date,
@@ -20,4 +20,4 @@ const PostSchema = mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('Posts', PostSchema)
+module.exports = mongoose.model('Books', BookSchema)
