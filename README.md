@@ -1,4 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).<br />
+Initially this project was a RESTful API I made by following the instructions on this [video] (https://www.youtube.com/watch?v=vjf774RKrLc).
 
 ### Built With
 
