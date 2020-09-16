@@ -45,7 +45,7 @@ router.get('/:bookId', async (req, res) => {
 
     router.delete('/:bookId', async (req, res) => {
         try {
-            const removedBook = await Book.remove({ _id: req.params.BookId})
+            const removedBook = await Book.remove({ _id: req.params.bookId})
             res.json(removedBook)
         }
         catch (err) {
@@ -57,7 +57,7 @@ router.get('/:bookId', async (req, res) => {
 
 router.patch('/:bookId', async (req, res) => {
     try {
-        const updatedBook = await Book.updateOne({ _id: req.params.postId}, {$set: {title: req.body.title, image: req.body.image, description: req.body.description}})
+        const updatedBook = await Book.updateOne({ _id: req.params.bookId}, {$set: {title: req.body.title, image: req.body.image, description: req.body.description}})
         res.json(updatedBook)
     }
     catch (err) {
