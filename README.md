@@ -39,7 +39,7 @@ npm install npm@latest -g
 1. Start MongoDB and make a MongoDB Database. More information at ["https://www.mongodb.com/basics/create-database"]
 2. Clone the repo
 ```sh
-git clone https://github.com/axb157030/NodeJS_RESTful.git
+git clone https://github.com/axb157030/NodeJS_RESTful.git --recurse-submodules
 ```
 3. Install NPM packages. Make sure to install them in the react-client-test directory as well
 ```sh
