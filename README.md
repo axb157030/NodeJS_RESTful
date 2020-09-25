@@ -36,7 +36,7 @@ npm install npm@latest -g
 
 ### Installation
 
-1. Start MongoDB and make a MongoDB Database. More information at ["https://www.mongodb.com/basics/create-database"]
+1. Start MongoDB and make a MongoDB Database. More information at [https://www.mongodb.com/basics/create-database](https://www.mongodb.com/basics/create-database)
 2. Clone the repo
 ```sh
 git clone https://github.com/axb157030/NodeJS_RESTful.git --recurse-submodules
@@ -50,22 +50,4 @@ npm install
 npm install materialize-css
 ```
 
-5. Replace DB_CONNECTION in app.js directory inside the project directory with the the uri needed to connect to MongoDB. Example ['mongodb://localhost:27017/myapp']
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
+5. Replace DB_CONNECTION in app.js directory inside the project directory with the the uri needed to connect to MongoDB. Example: '`mongodb://localhost:27017/myapp`
