@@ -45,7 +45,7 @@ git clone https://github.com/axb157030/NodeJS_RESTful.git --recurse-submodules
 ```sh
 npm install
 ```
-4. Install ['materialize-css']
+4. Install [materialize-css]
 ```sh
 npm install materialize-css
 ```
