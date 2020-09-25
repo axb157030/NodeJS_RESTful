@@ -50,4 +50,4 @@ npm install
 npm install materialize-css
 ```
 
-5. Replace DB_CONNECTION in app.js directory inside the project directory with the the uri needed to connect to MongoDB. Example: '`mongodb://localhost:27017/myapp`
+5. Replace DB_CONNECTION in app.js directory inside the project directory with the the uri needed to connect to MongoDB. Example: `mongodb://localhost:27017/myapp`
