@@ -3,51 +3,39 @@ Initially this project was a RESTful API I made by following the instructions on
 
 ### Built With
 
-* [materialize-css](https://materializecss.com/)
-
+- [materialize-css](https://materializecss.com/)
 
 ## Available Scripts
 
-### `npm start` 
+### `npm start`
 
 In the project directory, you can run to start RESTful API:
 
-### `npm start` 
+### `npm start`
 
 In the directory react-client-test, you can run to start the application:
 
-### `npm start` 
+### `npm start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:4000](http://localhost:4000) to start the NodeJS RESTful API in the browser. <br/>
 Open [http://localhost:3000](http://localhost:3000) to start the application in the browser.
 
 <!-- GETTING STARTED -->
-## Getting Started
 
+## Getting Started
 
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
+
+- npm
+
 ```sh
 npm install npm@latest -g
 ```
 
-### Installation
+### Run with Docker
 
-1. Start MongoDB and make a MongoDB Database. More information at [https://www.mongodb.com/basics/create-database](https://www.mongodb.com/basics/create-database)
-2. Clone the repo
-```sh
-git clone https://github.com/axb157030/NodeJS_RESTful.git --recurse-submodules
-```
-3. Install NPM packages. Make sure to install them in the react-client-test directory as well
-```sh
-npm install
-```
-4. Install `materialize-css`
-```sh
-npm install materialize-css
-```
-
-5. Replace DB_CONNECTION in app.js directory inside the project directory with the the uri needed to connect to MongoDB. Example: `mongodb://localhost:27017/myapp`
+1. Replace DB_CONNECTION in app.js directory inside the project directory with the the uri needed to connect to MongoDB. Example: `mongodb://localhost:27017/mymongodbdatabase
+2. docker-compose up --build
