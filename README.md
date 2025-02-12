@@ -36,7 +36,6 @@ npm install npm@latest -g
 ```
 
 ### Run with Docker
-1.
 ```sh
 docker-compose up --build
 ```
